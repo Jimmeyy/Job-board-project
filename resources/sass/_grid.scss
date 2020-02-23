@@ -2,31 +2,34 @@
 $flexboxgrid-grid-columns: 12 !default;
 // Set the gutter between columns.
 $flexboxgrid-gutter-width: 1rem !default;
-// Set a margin for the container sides.
-$flexboxgrid-outer-margin: 2rem !default;
 
-$flexboxgrid-breakpoints: sm 48em 46rem,
-md 62em 61rem,
-lg 75em 71rem !default;
 $flexboxgrid-max-width: 1200px !default;
+
+$flexboxgrid-breakpoints: sm 768px, md 1000px, lg 1201px !default;
+
+// Breakpoints:
+// - lg from 1201px to end
+// - md from 1000px to 1199px
+// - sm from 768px to 999px
+// - xs from begin to 767px
 
 //
 // -- Stop editing -- //
 //
 
-$gutter-compensation: $flexboxgrid-gutter-width * .5 * -1;
-$half-gutter-width: $flexboxgrid-gutter-width * .5;
+$gutter-compensation: $flexboxgrid-gutter-width * 0.5 * -1;
+$half-gutter-width: $flexboxgrid-gutter-width * 0.5;
 
-.wrapper {
-    box-sizing: border-box;
+.container {
+    position: relative;
+    width: 100%;
     max-width: $flexboxgrid-max-width;
     margin: 0 auto;
-}
+    padding: 0 15px;
 
-.container-fluid {
-    margin: 0 auto;
-    padding-right: $flexboxgrid-outer-margin;
-    padding-left: $flexboxgrid-outer-margin;
+    @include breakpoint-min(1000px) {
+        padding: 0 30px;
+    }
 }
 
 .row {
@@ -76,9 +79,7 @@ $name: xs;
 
         @if $i==0 {
             margin-left: 0;
-        }
-
-        @else {
+        } @else {
             margin-left: 100% / $flexboxgrid-grid-columns * $i;
         }
     }
@@ -133,17 +134,11 @@ $name: xs;
     order: 1;
 }
 
-
 @each $breakpoint in $flexboxgrid-breakpoints {
     $name: nth($breakpoint, 1);
     $size: nth($breakpoint, 2);
-    $container: nth($breakpoint, 3);
 
     @media only screen and (min-width: $size) {
-        .container {
-            width: $container;
-        }
-
         .col-#{$name} {
             @include flexboxgrid-sass-col-common;
             flex-basis: auto;
@@ -163,9 +158,7 @@ $name: xs;
 
                 @if $i==0 {
                     margin-left: 0;
-                }
-
-                @else {
+                } @else {
                     margin-left: 100% / $flexboxgrid-grid-columns * $i;
                 }
             }
