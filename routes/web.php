@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.app');
+Route::get('/', function() {
+    return view('home-page');
 });
 
-Route::get('/child', function() {
-    return view('child');
-});
