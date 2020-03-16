@@ -19,6 +19,17 @@ p {
     }
 }
 
+input,
+button,
+textarea {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+
+    @include breakpoint-min(1201px) {
+        font-size: 15px;
+    }
+}
+
 .heading {
     margin-bottom: 10px;
     text-align: center;

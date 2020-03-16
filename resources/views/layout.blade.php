@@ -9,6 +9,7 @@
 </head>
 <body>
     {{-- Header --}}
+    @include('header')
 
     {{-- Page content --}}
     <main class="main">
