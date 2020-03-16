@@ -17,5 +17,6 @@
     </main>
 
     {{-- Footer --}}
+    @include('footer')
 </body>
 </html>
