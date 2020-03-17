@@ -9,6 +9,21 @@
     &-menu {
         display: none;
 
+        @include breakpoint-max(1200px) {
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 350px;
+            padding: 22px 30px 30px 30px;
+            background-color: #0b1b46;
+
+            &.is-active {
+                display: flex;
+            }
+        }
+
         @include breakpoint-min(1201px) {
             display: flex;
             align-items: center;
@@ -17,6 +32,11 @@
 
         li {
             padding: 10px 25px;
+
+            @include breakpoint-max(1200px) {
+                padding: 20px 25px 20px 0px;
+                border-bottom: 1px solid #1e2e5a;
+            }
         }
 
         a,
@@ -33,30 +53,55 @@
             }
         }
 
-        &-mobile-btn {
-            text-align: right;
+        &-mobile {
+            &-btn {
+                text-align: right;
 
-            @include breakpoint-min(1201px) {
-                display: none;
+                @include breakpoint-min(1201px) {
+                    display: none;
+                }
+
+                img {
+                    height: 32px;
+                    height: 32px;
+                }
             }
 
-            img {
-                height: 32px;
-                height: 32px;
+            &-close {
+                position: absolute;
+                z-index: 10;
+                top: 30px;
+                right: 30px;
+                width: 22px;
+                height: 22px;
+                background: url('/images/icons/close-white.svg') no-repeat center center / 100%;
             }
         }
     }
 
     &-links {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
+        flex-direction: column;
+
+        @include breakpoint-max(1200px) {
+            margin-top: 36px;
+        }
+
+        @include breakpoint-min(1201px) {
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex: 1;
+        }
     }
 
     &-auth {
         display: flex;
         align-items: center;
+
+        @include breakpoint-max(1200px) {
+            order: -1;
+        }
 
         button {
             padding-left: 26px;

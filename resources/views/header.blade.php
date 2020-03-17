@@ -8,6 +8,7 @@
             </div>
             <div class="col-xs-6 col-lg-10">
                 <div class="header-menu">
+                    <div class="header-menu-mobile-close"></div>
                     <ul class="header-links">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Employers</a></li>
