@@ -19,6 +19,17 @@ p {
     }
 }
 
+input,
+button,
+textarea {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+
+    @include breakpoint-min(1201px) {
+        font-size: 15px;
+    }
+}
+
 .heading {
     margin-bottom: 10px;
     text-align: center;
@@ -249,5 +260,25 @@ p {
 
     &.favorite {
         background-image: url('/images/icons/favorite-grey.svg');
+    }
+}
+
+.download-btn {
+    padding: 12px 18px 12px 74px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background: no-repeat left 24px center / 32px;
+    color: #ffffff;
+
+    @include breakpoint-max(767px) {
+        margin-bottom: 20px;
+    }
+
+    &.apple {
+        background-image: url('/images/icons/apple-logo.svg');
+    }
+
+    &.android {
+        background-image: url('/images/icons/android-logo.svg');
     }
 }

@@ -9,6 +9,7 @@
 </head>
 <body>
     {{-- Header --}}
+    @include('header')
 
     {{-- Page content --}}
     <main class="main">
@@ -16,5 +17,6 @@
     </main>
 
     {{-- Footer --}}
+    @include('footer')
 </body>
 </html>
