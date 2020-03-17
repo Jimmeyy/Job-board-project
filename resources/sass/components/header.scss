@@ -75,6 +75,10 @@
                 width: 22px;
                 height: 22px;
                 background: url('/images/icons/close-white.svg') no-repeat center center / 100%;
+
+                @include breakpoint-min(1201px) {
+                    display: none;
+                }
             }
         }
     }

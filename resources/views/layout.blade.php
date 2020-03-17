@@ -18,5 +18,8 @@
 
     {{-- Footer --}}
     @include('footer')
+
+    {{-- Modals --}}
+    @include('modal-login')
 </body>
 </html>

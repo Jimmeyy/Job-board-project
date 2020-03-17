@@ -135,6 +135,20 @@ textarea {
     &.icon-marker {
         background-image: url('/images/icons/map-marker-pink.svg');
     }
+
+    &.border-grey {
+        border: 2px solid #e6e8ef;
+    }
+
+    &-wrapper {
+        &.margin-vertical {
+            margin: 10px 0;
+        }
+    }
+}
+
+.checkbox {
+    // here
 }
 
 .btn {
@@ -143,7 +157,7 @@ textarea {
     color: #000000;
     letter-spacing: 0;
     border-radius: 5px;
-    background-color: #999999;
+    background-color: transparent;
     transition: all 0.3s;
 
     @include breakpoint-min(1201px) {
@@ -170,7 +184,23 @@ textarea {
     }
 
     &.border-grey {
-        border: 1px solid #d2d2d2;
+        border: 2px solid #d2d2d2;
+    }
+
+    &.border-purple {
+        border: 2px solid #141f72;
+    }
+
+    &.border-pink {
+        border: 2px solid #fb236a;
+    }
+
+    &.auth {
+        width: 100%;
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: #ffffff;
+        background-color: #141f72;
     }
 }
 
