@@ -11,12 +11,12 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
-                        <input type="text" class="input border-grey icon-keyboard" placeholder="Enter username">
+                        <input type="text" class="input border-grey icon-user" placeholder="Enter username">
                     </div>
                 </div>
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
-                        <input type="password" class="input border-grey icon-keyboard" placeholder="Enter password">
+                        <input type="password" class="input border-grey icon-password" placeholder="Enter password">
                     </div>
                 </div>
                 <div class="col-xs-12">

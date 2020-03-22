@@ -136,6 +136,22 @@ textarea {
         background-image: url('/images/icons/map-marker-pink.svg');
     }
 
+    &.icon-user {
+        background-image: url('/images/icons/user-pink.svg');
+    }
+
+    &.icon-password {
+        background-image: url('/images/icons/password-pink.svg');
+    }
+
+    &.icon-email {
+        background-image: url('/images/icons/email-pink.svg');
+    }
+
+    &.icon-phone {
+        background-image: url('/images/icons/phone-pink.svg');
+    }
+
     &.border-grey {
         border: 2px solid #e6e8ef;
     }
