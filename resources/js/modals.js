@@ -7,16 +7,17 @@ const modals = function() {
         const openBtn = document.querySelector(modalBtnClass);
         const closeBtn = wrapper.querySelector('.modal-close-js');
 
-        return {
+        const modal = {
             wrapper,
             main,
             openBtn,
             closeBtn,
         };
-    }
 
-    const modalLogin = createModal('.modal-login-js', '.modal-login-btn-js');
-    const modalRegister = createModal('.modal-register-js', '.modal-register-btn-js');
+        modal.openBtn.addEventListener('click', () => open(modal));
+        modal.closeBtn.addEventListener('click', () => close(modal));
+        modal.wrapper.addEventListener('click', () => clickOutside(event, modal));
+    }
 
     function open(modal) {
         modal.wrapper.classList.add('is-active');
@@ -33,13 +34,8 @@ const modals = function() {
         }
     }
 
-    // modalLogin.openBtn.addEventListener('click', () => open(modalLogin));
-    // modalLogin.closeBtn.addEventListener('click', () => close(modalLogin));
-    // modalLogin.wrapper.addEventListener('click', () => clickOutside(event, modalLogin));
-
-    // modalRegister.openBtn.addEventListener('click', () => open(modalRegister));
-    // modalRegister.closeBtn.addEventListener('click', () => close(modalRegister));
-    // modalRegister.wrapper.addEventListener('click', () => clickOutside(event, modalRegister));
+    const modalLogin = createModal('.modal-login-js', '.modal-login-btn-js');
+    const modalRegister = createModal('.modal-register-js', '.modal-register-btn-js');
 };
 
 export default modals;

@@ -185,16 +185,22 @@ var modals = function modals() {
     var main = wrapper.querySelector('.modal-main');
     var openBtn = document.querySelector(modalBtnClass);
     var closeBtn = wrapper.querySelector('.modal-close-js');
-    return {
+    var modal = {
       wrapper: wrapper,
       main: main,
       openBtn: openBtn,
       closeBtn: closeBtn
     };
+    modal.openBtn.addEventListener('click', function () {
+      return open(modal);
+    });
+    modal.closeBtn.addEventListener('click', function () {
+      return close(modal);
+    });
+    modal.wrapper.addEventListener('click', function () {
+      return clickOutside(event, modal);
+    });
   }
-
-  var modalLogin = createModal('.modal-login-js', '.modal-login-btn-js');
-  var modalRegister = createModal('.modal-register-js', '.modal-register-btn-js');
 
   function open(modal) {
     modal.wrapper.classList.add('is-active');
@@ -210,13 +216,10 @@ var modals = function modals() {
     if (!isClickInside) {
       close(modal);
     }
-  } // modalLogin.openBtn.addEventListener('click', () => open(modalLogin));
-  // modalLogin.closeBtn.addEventListener('click', () => close(modalLogin));
-  // modalLogin.wrapper.addEventListener('click', () => clickOutside(event, modalLogin));
-  // modalRegister.openBtn.addEventListener('click', () => open(modalRegister));
-  // modalRegister.closeBtn.addEventListener('click', () => close(modalRegister));
-  // modalRegister.wrapper.addEventListener('click', () => clickOutside(event, modalRegister));
+  }
 
+  var modalLogin = createModal('.modal-login-js', '.modal-login-btn-js');
+  var modalRegister = createModal('.modal-register-js', '.modal-register-btn-js');
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (modals);
