@@ -22,5 +22,7 @@
     {{-- Modals --}}
     {{-- @include('modal-login') --}}
     @include('modal-register')
+
+    <script src="js/app.js"></script>
 </body>
 </html>

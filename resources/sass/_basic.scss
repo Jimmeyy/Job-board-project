@@ -131,6 +131,7 @@ textarea {
     &.dropdown {
         position: relative;
         cursor: pointer;
+        user-select: none;
 
         span {
             color: #a7a7a7;

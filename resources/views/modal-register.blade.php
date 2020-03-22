@@ -29,21 +29,36 @@
                         <input type="text" class="input border-grey icon-email" placeholder="Email">
                     </div>
                 </div>
+                {{-- temp --}}
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
-                        {{-- here --}}
-                        <div class="input dropdown border-grey icon-dropdown">
+                        <div class="input dropdown border-grey icon-dropdown dropdown-js">
                             <input type="hidden" value="">
                             <span>Specialism</span>
                             <ul>
-                                <li>Doctor</li>
-                                <li>IT</li>
-                                <li>Design</li>
-                                <li>Freelance</li>
-                                <li>Ziomo</li>
+                                <li data-value="Doctor">Doctor</li>
+                                <li data-value="It">IT</li>
+                                <li data-value="Design">Design</li>
+                                <li data-value="Freelance">Freelance</li>
+                                <li data-value="Ziomo">Ziomo</li>
                             </ul>
                         </div>
-                        {{-- here --}}
+                    </div>
+                </div>
+                {{-- temp --}}
+                <div class="col-xs-12">
+                    <div class="input-wrapper margin-vertical">
+                        <div class="input dropdown border-grey icon-dropdown dropdown-js">
+                            <input type="hidden" value="">
+                            <span>Specialism</span>
+                            <ul>
+                                <li data-value="Doctor">Doctor</li>
+                                <li data-value="It">IT</li>
+                                <li data-value="Design">Design</li>
+                                <li data-value="Freelance">Freelance</li>
+                                <li data-value="Ziomo">Ziomo</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xs-12">
