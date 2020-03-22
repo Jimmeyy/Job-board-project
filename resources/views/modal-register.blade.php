@@ -1,6 +1,6 @@
-<div class="modal-wrapper">
-    <div class="modal-main modal-login">
-        <div class="modal-close"></div>
+<div class="modal-wrapper modal-js modal-register-js">
+    <div class="modal-main">
+        <div class="modal-close modal-close-js"></div>
         <h2 class="heading small">Sign up</h2>
         {{-- <p>Click to login with demo user</p> --}}
         <div class="modal-category">
@@ -29,23 +29,6 @@
                         <input type="text" class="input border-grey icon-email" placeholder="Email">
                     </div>
                 </div>
-                {{-- temp --}}
-                <div class="col-xs-12">
-                    <div class="input-wrapper margin-vertical">
-                        <div class="input dropdown border-grey icon-dropdown dropdown-js">
-                            <input type="hidden" value="">
-                            <span>Specialism</span>
-                            <ul>
-                                <li data-value="Doctor">Doctor</li>
-                                <li data-value="It">IT</li>
-                                <li data-value="Design">Design</li>
-                                <li data-value="Freelance">Freelance</li>
-                                <li data-value="Ziomo">Ziomo</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                {{-- temp --}}
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
                         <div class="input dropdown border-grey icon-dropdown dropdown-js">

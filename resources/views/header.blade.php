@@ -18,10 +18,10 @@
                     </ul>
                     <ul class="header-auth">
                         <li>
-                            <button class="header-auth-register">Sign up</button>
+                            <button class="header-auth-register modal-register-btn-js">Sign up</button>
                         </li>
                         <li>
-                            <button class="header-auth-login">Login</button>
+                            <button class="header-auth-login modal-login-btn-js">Login</button>
                         </li>
                     </ul>
                 </div>

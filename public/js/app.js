@@ -96,9 +96,12 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dropdowns__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dropdowns */ "./resources/js/dropdowns.js");
+/* harmony import */ var _modals__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modals */ "./resources/js/modals.js");
 // require('./bootstrap');
 
+
 Object(_dropdowns__WEBPACK_IMPORTED_MODULE_0__["default"])();
+Object(_modals__WEBPACK_IMPORTED_MODULE_1__["default"])();
 
 /***/ }),
 
@@ -162,6 +165,61 @@ var dropdowns = function dropdowns() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (dropdowns);
+
+/***/ }),
+
+/***/ "./resources/js/modals.js":
+/*!********************************!*\
+  !*** ./resources/js/modals.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var modals = function modals() {
+  var activeClass = 'is-active';
+
+  function createModal(modalClass, modalBtnClass) {
+    var wrapper = document.querySelector(modalClass);
+    var main = wrapper.querySelector('.modal-main');
+    var openBtn = document.querySelector(modalBtnClass);
+    var closeBtn = wrapper.querySelector('.modal-close-js');
+    return {
+      wrapper: wrapper,
+      main: main,
+      openBtn: openBtn,
+      closeBtn: closeBtn
+    };
+  }
+
+  var modalLogin = createModal('.modal-login-js', '.modal-login-btn-js');
+  var modalRegister = createModal('.modal-register-js', '.modal-register-btn-js');
+
+  function open(modal) {
+    modal.wrapper.classList.add('is-active');
+  }
+
+  function close(modal) {
+    modal.wrapper.classList.remove('is-active');
+  }
+
+  function clickOutside(event, modal) {
+    var isClickInside = modal.main.contains(event.target);
+
+    if (!isClickInside) {
+      close(modal);
+    }
+  } // modalLogin.openBtn.addEventListener('click', () => open(modalLogin));
+  // modalLogin.closeBtn.addEventListener('click', () => close(modalLogin));
+  // modalLogin.wrapper.addEventListener('click', () => clickOutside(event, modalLogin));
+  // modalRegister.openBtn.addEventListener('click', () => open(modalRegister));
+  // modalRegister.closeBtn.addEventListener('click', () => close(modalRegister));
+  // modalRegister.wrapper.addEventListener('click', () => clickOutside(event, modalRegister));
+
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (modals);
 
 /***/ }),
 
