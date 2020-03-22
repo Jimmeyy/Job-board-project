@@ -31,7 +31,19 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
-                        <input type="text" class="input border-grey icon-dropdown" placeholder="Specialism">
+                        {{-- here --}}
+                        <div class="input dropdown border-grey icon-dropdown">
+                            <input type="hidden" value="">
+                            <span>Specialism</span>
+                            <ul>
+                                <li>Doctor</li>
+                                <li>IT</li>
+                                <li>Design</li>
+                                <li>Freelance</li>
+                                <li>Ziomo</li>
+                            </ul>
+                        </div>
+                        {{-- here --}}
                     </div>
                 </div>
                 <div class="col-xs-12">
