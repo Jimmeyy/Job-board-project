@@ -20,6 +20,7 @@
     @include('footer')
 
     {{-- Modals --}}
-    @include('modal-login')
+    {{-- @include('modal-login') --}}
+    @include('modal-register')
 </body>
 </html>
