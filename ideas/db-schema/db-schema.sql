@@ -128,13 +128,13 @@ ALTER TABLE `contact_info` ADD FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 
 ALTER TABLE `category_helper` ADD FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
-ALTER TABLE `users` ADD FOREIGN KEY (`id`) REFERENCES `employers` (`user_id`);
+ALTER TABLE `employers` ADD FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 ALTER TABLE `jobs` ADD FOREIGN KEY (`employer_id`) REFERENCES `employers` (`id`);
 
 ALTER TABLE `social_media` ADD FOREIGN KEY (`employer_id`) REFERENCES `employers` (`id`);
 
-ALTER TABLE `users` ADD FOREIGN KEY (`id`) REFERENCES `candidates` (`user_id`);
+ALTER TABLE `candidates` ADD FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 ALTER TABLE `favorites_jobs` ADD FOREIGN KEY (`candidate_id`) REFERENCES `candidates` (`id`);
 
