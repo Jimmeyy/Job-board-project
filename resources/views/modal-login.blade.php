@@ -7,16 +7,17 @@
             <button class="btn border-purple">Candidate</button>
             <button class="btn border-pink">Employer</button>
         </div>
-        <form class="modal-form">
+        <form class="modal-form" method="POST" action="{{ route('login') }}">
+            @csrf
             <div class="row">
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
-                        <input type="text" class="input border-grey icon-user" placeholder="Enter username">
+                        <input name="email" type="text" class="input border-grey icon-user" placeholder="Enter email">
                     </div>
                 </div>
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
-                        <input type="password" class="input border-grey icon-password" placeholder="Enter password">
+                        <input name="password" type="password" class="input border-grey icon-password" placeholder="Enter password">
                     </div>
                 </div>
                 <div class="col-xs-12">
