@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Home-page')
+@section('title', 'Home')
 
 @section('page-content')
     {{-- Home page content here --}}
