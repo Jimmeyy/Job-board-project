@@ -17,12 +17,22 @@
                         <li><a href="#">Pages</a></li>
                     </ul>
                     <ul class="header-auth">
-                        <li>
-                            <button class="header-auth-register modal-register-btn-js">Sign up</button>
-                        </li>
-                        <li>
-                            <button class="header-auth-login modal-login-btn-js">Login</button>
-                        </li>
+                        @guest
+                            <li>
+                                <button class="header-auth-register modal-register-btn-js">Sign up</button>
+                            </li>
+                            <li>
+                                <button class="header-auth-login modal-login-btn-js">Login</button>
+                            </li>
+                        @endguest
+                        @auth
+                            <li>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit" class="header-auth-login">Logout</button>
+                                </form>
+                            </li>
+                        @endauth
                     </ul>
                 </div>
                 <div class="header-menu-mobile-btn">
