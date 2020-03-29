@@ -27,6 +27,9 @@
                         @endguest
                         @auth
                             <li>
+                                <button>User: {{ Auth::user()->name }}</button>
+                            </li>
+                            <li>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
                                     <button type="submit" class="header-auth-login">Logout</button>
