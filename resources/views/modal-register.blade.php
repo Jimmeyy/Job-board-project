@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
-                        <input name="name" type="text" class="input border-grey icon-user" placeholder="Enter username">
+                        <input name="login" type="text" class="input border-grey icon-user" placeholder="Enter username">
                     </div>
                 </div>
                 <div class="col-xs-12">

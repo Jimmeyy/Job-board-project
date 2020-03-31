@@ -27,7 +27,7 @@
                         @endguest
                         @auth
                             <li>
-                                <button>User: {{ Auth::user()->name }}</button>
+                                <button>User: {{ Auth::user()->login }}</button>
                             </li>
                             <li>
                                 <form method="POST" action="{{ route('logout') }}">
