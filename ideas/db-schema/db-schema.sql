@@ -12,13 +12,24 @@ CREATE TABLE `users` (
 CREATE TABLE `candidates` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `user_id` int NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `surname` varchar(255) NOT NULL,
-  `city` varchar(255) NOT NULL,
+  `name` varchar(255),
+  `surname` varchar(255),
+  `city` varchar(255),
   `position` varchar(255),
   `birth_date` timestamp,
   `about` text,
   `cv_link` varchar(255)
+);
+
+CREATE TABLE `employers` (
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `user_id` int NOT NULL,
+  `owned_jobs` int,
+  `name` varchar(255),
+  `city` varchar(255),
+  `start_date` timestamp,
+  `teamsize` int,
+  `about` text
 );
 
 CREATE TABLE `education` (
@@ -39,17 +50,6 @@ CREATE TABLE `experience` (
   `start_date` timestamp NOT NULL,
   `end_date` timestamp NOT NULL,
   `description` text
-);
-
-CREATE TABLE `employers` (
-  `id` int PRIMARY KEY AUTO_INCREMENT,
-  `user_id` int NOT NULL,
-  `owned_jobs` int,
-  `name` varchar(255) NOT NULL,
-  `city` varchar(255) NOT NULL,
-  `start_date` timestamp NOT NULL,
-  `teamsize` int,
-  `about` text
 );
 
 CREATE TABLE `social_media` (
