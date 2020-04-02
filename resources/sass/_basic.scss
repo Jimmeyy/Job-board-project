@@ -198,6 +198,14 @@ textarea {
         &.margin-vertical {
             margin: 10px 0;
         }
+
+        .input-error {
+            margin-top: 5px;
+            padding-left: 5px;
+            text-align: left;
+            color: red;
+            font-size: 13px;
+        }
     }
 }
 

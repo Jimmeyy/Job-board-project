@@ -13,11 +13,17 @@
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
                         <input name="email" type="text" class="input border-grey icon-user" placeholder="Enter email">
+                        @error('email')
+                            <p class="input-error">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
                         <input name="password" type="password" class="input border-grey icon-password" placeholder="Enter password">
+                        @error('password')
+                            <p class="input-error">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
                 <div class="col-xs-12">
