@@ -13,21 +13,33 @@
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
                         <input name="login" type="text" class="input border-grey icon-user" placeholder="Enter username">
+                        @error('login')
+                            <p class="input-error">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
                         <input name="password" type="password" class="input border-grey icon-password" placeholder="Enter password">
+                        @error('password')
+                            <p class="input-error">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
                         <input name="password_confirmation" type="password" class="input border-grey icon-password" placeholder="Repeat password">
+                        @error('password_confirmation')
+                            <p class="input-error">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
                         <input name="email" type="text" class="input border-grey icon-email" placeholder="Email">
+                        @error('email')
+                            <p class="input-error">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
                 <div class="col-xs-12">
