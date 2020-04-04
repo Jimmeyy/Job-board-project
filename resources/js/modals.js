@@ -1,5 +1,5 @@
 const modals = function() {
-    const activeClass = 'is-active';
+    const hideClass = 'is-hide';
 
     function createModal(modalClass, modalBtnClass, modalQueryParam) {
         const wrapper = document.querySelector(modalClass);
@@ -20,15 +20,15 @@ const modals = function() {
         modal.closeBtn.addEventListener('click', () => close(modal));
         modal.wrapper.addEventListener('click', () => clickOutside(event, modal));
 
-        checkQueryParam(modal);
+        // checkQueryParam(modal);
     }
 
     function open(modal) {
-        modal.wrapper.classList.add('is-active');
+        modal.wrapper.classList.remove(hideClass);
     }
 
     function close(modal) {
-        modal.wrapper.classList.remove('is-active');
+        modal.wrapper.classList.add(hideClass);
     }
 
     function clickOutside(event, modal) {
@@ -38,18 +38,18 @@ const modals = function() {
         }
     }
 
-    function checkQueryParam(modal) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const param = urlParams.get(modal.queryParam);
-        console.log(param);
+    // function checkQueryParam(modal) {
+    //     const urlParams = new URLSearchParams(window.location.search);
+    //     const param = urlParams.get(modal.queryParam);
+    //     console.log(param);
 
-        if (param) {
-            open(modal);
-        }
-    }
+    //     if (param) {
+    //         open(modal);
+    //     }
+    // }
 
-    const modalLogin = createModal('.modal-login-js', '.modal-login-btn-js', 'modalLogin');
-    const modalRegister = createModal('.modal-register-js', '.modal-register-btn-js', 'modalRegister');
+    // const modalLogin = createModal('.modal-login-js', '.modal-login-btn-js', 'modalLogin');
+    // const modalRegister = createModal('.modal-register-js', '.modal-register-btn-js', 'modalRegister');
 };
 
 export default modals;

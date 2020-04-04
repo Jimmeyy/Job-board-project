@@ -19,10 +19,10 @@
                     <ul class="header-auth">
                         @guest
                             <li>
-                                <button class="header-auth-register modal-register-btn-js">Sign up</button>
+                                <a href="{{ route('register') }}" class="header-auth-register modal-register-btn-js">Sign up</a>
                             </li>
                             <li>
-                                <button class="header-auth-login modal-login-btn-js">Login</button>
+                                <a href="{{ route('login') }}" class="header-auth-login modal-login-btn-js">Login</a>
                             </li>
                         @endguest
                         @auth

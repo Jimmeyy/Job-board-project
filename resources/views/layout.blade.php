@@ -11,19 +11,19 @@
 </head>
 <body>
     {{-- Header --}}
-    @include('header')
+    @include('components.header')
 
     {{-- Page content --}}
     <main class="main">
-        @yield('page-content')
+        @yield('content')
     </main>
 
     {{-- Footer --}}
-    @include('footer')
+    @include('components.footer')
 
     {{-- Modals --}}
-    @include('modal-login')
-    @include('modal-register')
+    {{-- @include('modal-login')
+    @include('modal-register') --}}
 
     <script src="js/app.js"></script>
 </body>

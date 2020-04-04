@@ -2,7 +2,7 @@
 
 @section('title', 'Home')
 
-@section('page-content')
+@section('content')
     {{-- Home page content here --}}
 
     {{-- hero section- --}}

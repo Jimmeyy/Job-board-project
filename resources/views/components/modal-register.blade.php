@@ -1,8 +1,9 @@
 <div class="modal-wrapper modal-js modal-register-js">
     <div class="modal-main">
-        <div class="modal-close modal-close-js"></div>
+        <a href="{{ route('home') }}">
+            <div class="modal-close modal-close-js"></div>
+        </a>
         <h2 class="heading small">Sign up</h2>
-        {{-- <p>Click to login with demo user</p> --}}
         <div class="modal-category">
             <button class="btn border-purple">Candidate</button>
             <button class="btn border-pink">Employer</button>

@@ -1,6 +1,8 @@
 <div class="modal-wrapper modal-js modal-login-js">
     <div class="modal-main">
-        <div class="modal-close modal-close-js"></div>
+        <a href="{{ route('home') }}">
+            <div class="modal-close modal-close-js"></div>
+        </a>
         <h2 class="heading small">User login</h2>
         <p>Click to login with demo user</p>
         <div class="modal-category">
