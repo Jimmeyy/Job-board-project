@@ -64,11 +64,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12">
+                {{-- <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
                         <input type="text" class="input border-grey icon-phone" placeholder="Phone number">
                     </div>
-                </div>
+                </div> --}}
                 <div class="col-xs-12">
                     <button type="submit" class="btn auth">Sign up</button>
                 </div>
