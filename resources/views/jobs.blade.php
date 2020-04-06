@@ -10,9 +10,8 @@
             <div class="row center-lg">
                 <div class="col-xs-12 col-lg-10">
                     <div class="hero-section-content">
-                        <h1 class="heading white">The easiest way to get your new job </h1>
-                        <h4 class="subheading purple">Find jobs, Employment & Career Opportunities</h4>
-                        <div class="hero-section-form">
+                        <h1 class="heading white">Explore Thousand Of Jobs</h1>
+                        <div class="search-form">
                             <div class="input-wrapper">
                                 <input type="text" class="input icon-keyboard"
                                     placeholder="Job title, keywords or company name">
@@ -21,9 +20,6 @@
                                 <input type="text" class="input icon-marker" placeholder="City, province or region">
                             </div>
                             <button type="submit" class="btn only-icon bg-purple"></button>
-                        </div>
-                        <div class="hero-section-bottom">
-                            <p class="white">Or browse job offers by <button class="btn badge">category</button></p>
                         </div>
                     </div>
                 </div>
