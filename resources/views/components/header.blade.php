@@ -10,19 +10,21 @@
                 <div class="header-menu">
                     <div class="header-menu-mobile-close"></div>
                     <ul class="header-links">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
                         <li><a href="#">Employers</a></li>
                         <li><a href="#">Candidates</a></li>
-                        <li><a href="#">Jobs</a></li>
+                        <li><a href="{{ route('jobs') }}">Jobs</a></li>
                         <li><a href="#">Pages</a></li>
                     </ul>
                     <ul class="header-auth">
                         @guest
                             <li>
-                                <a href="{{ route('register') }}" class="header-auth-register modal-register-btn-js">Sign up</a>
+                                <a href="{{ route('register') }}"
+                                    class="header-auth-register modal-register-btn-js">Sign up</a>
                             </li>
                             <li>
-                                <a href="{{ route('login') }}" class="header-auth-login modal-login-btn-js">Login</a>
+                                <a href="{{ route('login') }}"
+                                    class="header-auth-login modal-login-btn-js">Login</a>
                             </li>
                         @endguest
                         @auth
