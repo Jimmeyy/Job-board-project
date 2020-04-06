@@ -15,6 +15,11 @@ Route::get('/', function() {
     return redirect('/home');
 });
 
+// Auth routes
 Auth::routes();
 
+// Home routes
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Jobs routes
+Route::get('/jobs', 'JobController@index')->name('jobs');
