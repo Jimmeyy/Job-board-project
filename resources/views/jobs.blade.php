@@ -147,25 +147,32 @@
                 </div>
             </div>
             <div class="pagination-wrapper">
-                <a href="#" class="btn pagination-prev">Prev</a>
-                <ul class="pagination-main">
-                    <li>
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">...</a>
-                    </li>
-                    <li>
-                        <a href="#">23</a>
-                    </li>
-                </ul>
-                <a href="#" class="btn pagination-next">Next</a>
+                <div class="pagination">
+                    <ul class="pagination-main">
+                        <li>
+                            <a href="#" class="btn-pagination prev">
+                                <span>Prev</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">...</a>
+                        </li>
+                        <li>
+                            <a href="#">23</a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-pagination next">
+                                <span>Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
