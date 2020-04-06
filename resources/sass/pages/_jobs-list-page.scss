@@ -2,6 +2,110 @@
 
     .hero-section {
         padding: 200px 0 60px 0;
-        background-color: #333;
+        background: url('/images/home-page-hero-section-bg.jpg') no-repeat center center / cover;
     }
+
+    .jobs-list {
+        // here
+
+        &-wrapper {
+            padding: 50px 0;
+        }
+
+        &-header {
+            margin-bottom: 30px;
+
+            @include breakpoint-max(1200px) {
+                h3 {
+                    margin-bottom: 10px;
+                }
+
+                .input-wrapper {
+                    margin: 0;
+
+                    &:first-of-type {
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            @include breakpoint-min(1201px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    .jobs-filter-panel {
+        display: flex;
+        align-items: center;
+
+        &>span {
+            @include breakpoint-max(1200px) {
+                display: none;
+            }
+        }
+    }
+
+    .job-box {
+        padding: 20px 15px 20px 15px;
+        border-radius: 5px;
+        border: 1px solid #d2d2d2;
+        margin-bottom: 30px;
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-content {
+            margin-top: 40px;
+
+            h3 {
+                font-size: 17px;
+                font-weight: 700;
+
+            }
+
+            h4 {
+                font-size: 14px;
+                font-weight: 400;
+                color: #fb236a;
+            }
+        }
+
+        &-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+
+            span {
+                font-size: 13px;
+                color: #888888;
+            }
+        }
+
+        &-btn {
+            padding: 10px 15px;
+            font-size: 13px;
+            text-transform: uppercase;
+            color: #fb236a;
+            border: 1px solid #fb236a;
+            border-radius: 50px;
+
+            @include breakpoint-min(1201px) {
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: #fb236a;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
 }

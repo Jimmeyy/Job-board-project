@@ -132,6 +132,11 @@ textarea {
         position: relative;
         cursor: pointer;
         user-select: none;
+        min-width: 160px;
+
+        @include breakpoint-min(1201px) {
+            min-width: 180px;
+        }
 
         span {
             color: #a7a7a7;
@@ -156,7 +161,7 @@ textarea {
             padding: 5px 0;
         }
 
-        &.is-active > ul {
+        &.is-active>ul {
             display: block;
         }
     }
@@ -197,6 +202,10 @@ textarea {
     &-wrapper {
         &.margin-vertical {
             margin: 10px 0;
+        }
+
+        &.margin-horizontal {
+            margin: 0 8px;
         }
 
         .input-error {
