@@ -1,12 +1,18 @@
-<div class="modal-wrapper modal-js modal-register-js">
+<div class="modal-wrapper modal-wrapper-auth modal-js modal-register-js">
     <div class="modal-main">
         <a href="{{ route('home') }}">
             <div class="modal-close modal-close-js"></div>
         </a>
         <h2 class="heading small">Sign up</h2>
         <div class="modal-category">
-            <button class="btn border-purple">Candidate</button>
-            <button class="btn border-pink">Employer</button>
+            <label for="radio-candidate">
+                <input id="radio-candidate" type="radio" name="type" value="0"  checked>
+                <div class="btn border-purple">Candidate</div>
+            </label>
+            <label for="radio-employer">
+                <input id="radio-employer" type="radio" name="type" value="1">
+                <div class="btn border-pink">Employer</div>
+            </label>
         </div>
         <form class="modal-form" method="POST" action="{{ route('register') }}">
             @csrf

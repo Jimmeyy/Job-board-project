@@ -1,14 +1,10 @@
-<div class="modal-wrapper modal-js modal-login-js">
+<div class="modal-wrapper modal-wrapper-auth modal-js modal-login-js">
     <div class="modal-main">
         <a href="{{ route('home') }}">
             <div class="modal-close modal-close-js"></div>
         </a>
         <h2 class="heading small">User login</h2>
         <p>Click to login with demo user</p>
-        <div class="modal-category">
-            <button class="btn border-purple">Candidate</button>
-            <button class="btn border-pink">Employer</button>
-        </div>
         <form class="modal-form" method="POST" action="{{ route('login') }}">
             @csrf
             <div class="row">

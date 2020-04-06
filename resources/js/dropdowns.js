@@ -1,6 +1,6 @@
 const dropdowns = function() {
     const activeClass = 'is-active';
-    let dropdowns = [...document.querySelectorAll('.dropdown-js')];
+    const dropdowns = [...document.querySelectorAll('.dropdown-js')];
 
     function closeAll() {
         dropdowns.forEach(dropdown => dropdown.classList.remove(activeClass));
@@ -23,6 +23,7 @@ const dropdowns = function() {
             const dropdownInput = dropdown.querySelector('input');
             dropdownSpan.textContent = value;
             dropdownInput.setAttribute('value', value);
+            dropdownSpan.style.color = '#000000';
         }
     }
 
