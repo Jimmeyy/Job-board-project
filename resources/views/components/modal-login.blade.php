@@ -27,7 +27,7 @@
                 <div class="col-xs-12">
                     <div class="modal-additional-bar">
                         <div class="input-wrapper">
-                            <input type="checkbox" name="remember_token" class="checkbox">
+                            <input type="checkbox" name="remember" class="checkbox">
                             <label for="">Remember me</label>
                         </div>
                         <a href="#">Forgot password?</a>
