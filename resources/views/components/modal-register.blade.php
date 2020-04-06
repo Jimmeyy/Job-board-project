@@ -4,18 +4,23 @@
             <div class="modal-close modal-close-js"></div>
         </a>
         <h2 class="heading small">Sign up</h2>
-        <div class="modal-category">
-            <label for="radio-candidate">
-                <input id="radio-candidate" type="radio" name="type" value="0"  checked>
-                <div class="btn border-purple">Candidate</div>
-            </label>
-            <label for="radio-employer">
-                <input id="radio-employer" type="radio" name="type" value="1">
-                <div class="btn border-pink">Employer</div>
-            </label>
-        </div>
         <form class="modal-form" method="POST" action="{{ route('register') }}">
             @csrf
+            <div class="modal-category">
+                <label for="radio-candidate">
+                    <input id="radio-candidate" type="radio" name="type" value="0"  checked>
+                    <div class="btn border-purple">Candidate</div>
+                </label>
+                <label for="radio-employer">
+                    <input id="radio-employer" type="radio" name="type" value="1">
+                    <div class="btn border-pink">Employer</div>
+                </label>
+            </div>
+            <div class="input-wrapper">
+                @error('type')
+                    <p class="input-error">{{ $message }}</p>
+                @enderror
+            </div>
             <div class="row">
                 <div class="col-xs-12">
                     <div class="input-wrapper margin-vertical">
