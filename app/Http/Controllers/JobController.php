@@ -27,4 +27,8 @@ class JobController extends Controller
         return view('jobs');
     }
 
+    public function show() {
+        return view('job-single');
+    }
+
 }

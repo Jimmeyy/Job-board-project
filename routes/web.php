@@ -23,3 +23,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Jobs routes
 Route::get('/jobs', 'JobController@index')->name('jobs');
+Route::get('/single-job', 'JobController@show')->name('single-job');
