@@ -17,9 +17,10 @@
         </div>
     </section>
 
-    {{-- Job header section --}}
-    <section class="job-header">
-        <div class="container">
+    <div class="container">
+
+        {{-- Job header section --}}
+        <section class="job-header">
             <div class="row">
                 <div class="col-xs-12 col-lg-9">
                     <div class="job-header-main">
@@ -28,27 +29,25 @@
                         </div>
                         <div class="job-header-main-content">
                             <h3>Tera planer</h3>
-                            <p>Sacramento, california</p>
+                            <p class="small with-icon icon-location-purple">Sacramento, california</p>
                             <ul>
-                                <li>Aplications 1</li>
-                                <li>Post Date: 26.02.2020</li>
-                                <li>Views 5683</li>
+                                <li class="small with-icon icon-aplications-purple">Aplications 1</li>
+                                <li class="small with-icon icon-calendar-purple">Post Date: 26.02.2020</li>
+                                <li class="small with-icon icon-views-purple">Views 5683</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-lg-3">
                     <div class="job-header-btns">
-                        <button class="btn">Apply for job</button>
+                        <button class="btn job-apply">Apply for job</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    {{-- Job main section --}}
-    <section class="job-main">
-        <div class="container">
+        {{-- Job main section --}}
+        <section class="job-main">
             <div class="row">
                 <div class="col-xs-12 col-lg-8">
                     <div class="job-main-content">
@@ -62,7 +61,7 @@
                             <h3>Required Knowledge, Skills, and Abilities</h3>
                             <ul>
                                 <li>Ability to write code – HTML & CSS (SCSS flavor of SASS preferred when writing CSS)</li>
-                                <li>Proficient in Photoshop, Illustrator, bonus points for familiarity with Sketch (Sketch is our preferred concepting)</li>
+                                <li>Proficient in Photoshop, Illustrator, bonus points for familiarity with Sketch</li>
                                 <li>Cross-browser and platform testing as standard practice</li>
                                 <li>Experience using Invision a plus</li>
                                 <li> Experience in video production a plus or, at a minimum, a willingness to learn</li>
@@ -84,28 +83,29 @@
                     <div class="job-main-overview">
                         <h3>Job overview</h3>
                         <ul>
-                            <li>
+                            <li class="icon-money-purple">
                                 <h4>Offered salary</h4>
-                                <p>15.000 - 20.000</p>
+                                <p class="small">15.000 - 20.000</p>
                             </li>
-                            <li>
+                            <li class="icon-location-purple">
                                 <h4>Location</h4>
-                                <p>London</p>
+                                <p class="small">London</p>
                             </li>
-                            <li>
+                            <li class="icon-experience-purple">
                                 <h4>Experience</h4>
-                                <p>2 years</p>
+                                <p class="small">2 years</p>
                             </li>
-                            <li>
+                            <li class="icon-position-purple">
                                 <h4>Position</h4>
-                                <p>Miner</p>
+                                <p class="small">Miner</p>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
 
 </div>
 @endsection

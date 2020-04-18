@@ -19,6 +19,34 @@ p {
     }
 }
 
+p, li {
+    &.small {
+        font-size: 13px;
+        color: #888888;
+    }
+
+    &.with-icon {
+        padding: 5px 0 5px 25px;
+        background: no-repeat left center / auto;
+    }
+
+    &.icon-location-purple {
+        background-image: url('/images/icons/location-purple.svg');
+    }
+
+    &.icon-aplications-purple {
+        background-image: url('/images/icons/aplications-purple.svg');
+    }
+
+    &.icon-calendar-purple {
+        background-image: url('/images/icons/calendar-purple.svg');
+    }
+
+    &.icon-views-purple {
+        background-image: url('/images/icons/views-purple.svg');
+    }
+}
+
 input,
 button,
 textarea {
@@ -277,6 +305,9 @@ textarea {
 
     &.job-apply {
         background-color: #a0a5e1;
+        color: #ffffff;
+        border-radius: 50px;
+        width: 100%;
     }
 }
 

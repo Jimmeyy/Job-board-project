@@ -5,4 +5,107 @@
         background: url('/images/home-page-hero-section-bg.jpg') no-repeat center center / cover;
     }
 
+    .job-header {
+        padding: 40px 0 30px 0;
+        border-bottom: 1px solid #edeff7;
+
+        &-btns {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        &-main {
+            display: flex;
+            align-items: center;
+
+            &-img {
+                width: 120px;
+                height: 100px;
+                margin-right: 25px;
+                border: 1px solid #e6e8ef;
+                border-radius: 8px;
+
+                img {
+                    max-width: 80%;
+                }
+            }
+
+            &-content {
+
+                h3 {
+                    margin-bottom: 6px;
+                }
+
+                ul {
+                    display: flex;
+                    margin-top: 6px;
+                }
+
+                li {
+                    margin-right: 25px;
+                }
+            }
+        }
+    }
+
+    .job-main {
+        padding: 40px 0;
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        &-overview {
+
+            h4 {
+                font-weight: 400;
+                margin-bottom: 5px;
+            }
+
+            ul {
+                padding: 20px 30px;
+                border: 1px solid #e6e8ef;
+                border-radius: 8px;
+            }
+
+            li {
+                margin-bottom: 30px;
+                padding-left: 50px;
+                background: no-repeat left center / 30px;
+
+                &.icon-money-purple {
+                    background-image: url('/images/icons/money-purple.svg');
+                }
+
+                &.icon-location-purple {
+                    background-image: url('/images/icons/location-purple.svg');
+                    background-size: 24px;
+                }
+
+                &.icon-experience-purple {
+                    background-image: url('/images/icons/experience-purple.svg');
+                }
+
+                &.icon-position-purple {
+                    background-image: url('/images/icons/position-purple.svg');
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+    }
+
+    .job-textblock {
+        padding-bottom: 30px;
+
+        ul {
+            list-style: square;
+            list-style-position: inside;
+        }
+    }
+
 }
