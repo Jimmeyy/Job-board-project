@@ -15,6 +15,19 @@ class CreateJobsTable extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('employer_id');
+            $table->foreignId('category_id');
+            $table->string('position')->nullable();
+            $table->string('location')->nullable();
+            $table->integer('aplication_amount')->nullable();
+            $table->enum('workload', ['full time', 'part time']);
+            $table->string('description')->nullable();
+            $table->float('salary_start')->nullable();
+            $table->float('salary_end')->nullable();
+            $table->integer('min_experience')->nullable();
+            $table->text('required_skills')->nullable();
+            $table->text('nice_to_have_skills')->nullable();
+            $table->date('expires_at')->nullable();
             $table->timestamps();
         });
     }
