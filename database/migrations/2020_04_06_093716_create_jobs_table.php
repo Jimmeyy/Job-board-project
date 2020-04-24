@@ -17,17 +17,17 @@ class CreateJobsTable extends Migration
             $table->id();
             $table->foreignId('employer_id');
             $table->foreignId('category_id');
-            $table->string('position')->nullable();
-            $table->string('location')->nullable();
-            $table->integer('aplication_amount')->nullable();
+            $table->string('position');
+            $table->string('location');
+            $table->integer('aplication_amount');
             $table->enum('workload', ['full time', 'part time']);
-            $table->string('description')->nullable();
-            $table->float('salary_start')->nullable();
-            $table->float('salary_end')->nullable();
+            $table->text('description')->nullable();
+            $table->float('salary_start');
+            $table->float('salary_end');
             $table->integer('min_experience')->nullable();
             $table->text('required_skills')->nullable();
             $table->text('nice_to_have_skills')->nullable();
-            $table->date('expires_at')->nullable();
+            $table->date('expires_at');
             $table->timestamps();
         });
     }
