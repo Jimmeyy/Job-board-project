@@ -32,13 +32,14 @@ class JobController extends Controller
 
     public function show($id) {
 
-        $job = Job::where('id', $id)->get();
-        
+        // $job = Job::where('id', $id)->get();
+        $job = Job::find($id);
+
         if (empty(json_decode($job, true))) {
             return redirect('jobs');
         }
         
-        return view('job-single')->with('job', $job[0]);
+        return view('job-single')->with('job', $job);
     }
 
 }

@@ -16,9 +16,7 @@
             </div>
         </div>
     </section>
-
     <div class="container">
-
         {{-- Job header section --}}
         <section class="job-header">
             <div class="row">
@@ -75,6 +73,10 @@
                     <div class="job-main-overview">
                         <h3>Job overview</h3>
                         <ul>
+                            <li class="icon-position-purple">
+                                <h4>Job category</h4>
+                                <p class="small">{{ $job->category->name }}</p>
+                            </li>
                             <li class="icon-money-purple">
                                 <h4>Offered salary</h4>
                                 <p class="small">{{ $job->salary_start }} - {{ $job->salary_end }} pln</p>
