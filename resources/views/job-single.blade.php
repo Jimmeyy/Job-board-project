@@ -10,7 +10,7 @@
             <div class="row center-lg">
                 <div class="col-xs-12 col-lg-10">
                     <div class="hero-section-content">
-                        <h1 class="heading small white">Job title lorem ipsum</h1>
+                        <h1 class="heading small white">Position: {{ $job->position }}</h1>
                     </div>
                 </div>
             </div>
@@ -29,11 +29,11 @@
                         </div>
                         <div class="job-header-main-content">
                             <h3>Tera planer</h3>
-                            <p class="small with-icon icon-location-purple">Sacramento, california</p>
+                            <p class="small with-icon icon-location-purple">{{ $job->location }}</p>
                             <ul>
-                                <li class="small with-icon icon-aplications-purple">Aplications 1</li>
-                                <li class="small with-icon icon-calendar-purple">Post Date: 26.02.2020</li>
-                                <li class="small with-icon icon-views-purple">Views 5683</li>
+                                <li class="small with-icon icon-aplications-purple">Aplications {{ $job->aplications_amount }}</li>
+                                <li class="small with-icon icon-calendar-purple">Post Date: {{ $job->created_at }}</li>
+                                {{-- <li class="small with-icon icon-views-purple">Views 5683</li> --}}
                             </ul>
                         </div>
                     </div>
@@ -54,27 +54,19 @@
                         <div class="job-textblock">
                             <h3>Job description</h3>
                             <p>
-                                Company is a 2016 Iowa City-born start-up that develops consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                                {{ $job->description }}
                             </p>
                         </div>
                         <div class="job-textblock">
                             <h3>Required Knowledge, Skills, and Abilities</h3>
                             <ul>
-                                <li>Ability to write code – HTML & CSS (SCSS flavor of SASS preferred when writing CSS)</li>
-                                <li>Proficient in Photoshop, Illustrator, bonus points for familiarity with Sketch</li>
-                                <li>Cross-browser and platform testing as standard practice</li>
-                                <li>Experience using Invision a plus</li>
-                                <li> Experience in video production a plus or, at a minimum, a willingness to learn</li>
+                                <li>{{ $job->required_skills }}</li>
                             </ul>
                         </div>
                         <div class="job-textblock">
                             <h3>Education + Experience</h3>
                             <ul>
-                                <li>Advanced degree or equivalent experience in graphic and web design</li>
-                                <li>3 or more years of professional design experience</li>
-                                <li>Direct response email experience</li>
-                                <li>Ecommerce website design experience</li>
-                                <li>Familiarity with mobile and web apps preferred</li>
+                                <li>{{ $job->nice_to_have_skills }}</li>
                             </ul>
                         </div>
                     </div>
@@ -85,19 +77,19 @@
                         <ul>
                             <li class="icon-money-purple">
                                 <h4>Offered salary</h4>
-                                <p class="small">15.000 - 20.000</p>
+                                <p class="small">{{ $job->salary_start }} - {{ $job->salary_end }} pln</p>
                             </li>
                             <li class="icon-location-purple">
                                 <h4>Location</h4>
-                                <p class="small">London</p>
+                                <p class="small">{{ $job->location }}</p>
                             </li>
                             <li class="icon-experience-purple">
                                 <h4>Experience</h4>
-                                <p class="small">2 years</p>
+                                <p class="small">{{ $job->min_experience }} years</p>
                             </li>
                             <li class="icon-position-purple">
                                 <h4>Position</h4>
-                                <p class="small">Miner</p>
+                                <p class="small">{{ $job->position }}</p>
                             </li>
                         </ul>
                     </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Job;
 
 class JobController extends Controller 
 {
@@ -24,11 +25,20 @@ class JobController extends Controller
      */
     public function index() 
     {
-        return view('jobs');
+        $jobs = Job::all();
+
+        return view('jobs')->with('jobs', $jobs);
     }
 
-    public function show() {
-        return view('job-single');
+    public function show($id) {
+
+        $job = Job::where('id', $id)->get();
+        
+        if (empty(json_decode($job, true))) {
+            return redirect('jobs');
+        }
+        
+        return view('job-single')->with('job', $job[0]);
     }
 
 }

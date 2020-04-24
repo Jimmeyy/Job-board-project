@@ -13,8 +13,7 @@
                         <h1 class="heading white">Explore Thousand Of Jobs</h1>
                         <div class="search-form">
                             <div class="input-wrapper">
-                                <input type="text" class="input icon-keyboard"
-                                    placeholder="Job title, keywords or company name">
+                                <input type="text" class="input icon-keyboard" placeholder="Job title, keywords or company name">
                             </div>
                             <div class="input-wrapper">
                                 <input type="text" class="input icon-marker" placeholder="City, province or region">
@@ -61,7 +60,7 @@
                 </div>
                 <div class="jobs-list">
                     <div class="row">
-                        <div class="col-xs-12 col-lg-4">
+                        {{-- <div class="col-xs-12 col-lg-4">
                             <div class="job-box">
                                 <div class="job-box-header">
                                     <div class="badge pink">Full time</div>
@@ -76,71 +75,25 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12 col-lg-4">
-                            <div class="job-box">
-                                <div class="job-box-header">
-                                    <div class="badge pink">Full time</div>
-                                    <div class="icon-box favorite margin-right"></div>
-                                </div>
-                                <div class="job-box-content">
-                                    <h3>Web designer/Developer</h3>
-                                    <h4>Massimo Artemisis</h4>
-                                    <div class="job-box-footer">
-                                        <span>Sacramento, California</span>
-                                        <a href="#" class="job-box-btn">Apply now</a>
+                        </div> --}}
+                        @foreach($jobs as $job)
+                            <div class="col-xs-12 col-lg-4">
+                                <div class="job-box">
+                                    <div class="job-box-header">
+                                        <div class="badge pink">{{ $job->workload }}</div>
+                                        <div class="icon-box favorite margin-right"></div>
+                                    </div>
+                                    <div class="job-box-content">
+                                        <h3>{{ $job->position }}</h3>
+                                        <h4>Massimo Artemisis</h4>
+                                        <div class="job-box-footer">
+                                            <span>{{ $job->location }}</span>
+                                            <a href="{{ url('single-job/'.$job->id) }}" class="job-box-btn">Apply now</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12 col-lg-4">
-                            <div class="job-box">
-                                <div class="job-box-header">
-                                    <div class="badge pink">Full time</div>
-                                    <div class="icon-box favorite margin-right"></div>
-                                </div>
-                                <div class="job-box-content">
-                                    <h3>Web designer/Developer</h3>
-                                    <h4>Massimo Artemisis</h4>
-                                    <div class="job-box-footer">
-                                        <span>Sacramento, California</span>
-                                        <a href="#" class="job-box-btn">Apply now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-lg-4">
-                            <div class="job-box">
-                                <div class="job-box-header">
-                                    <div class="badge pink">Full time</div>
-                                    <div class="icon-box favorite margin-right"></div>
-                                </div>
-                                <div class="job-box-content">
-                                    <h3>Web designer/Developer</h3>
-                                    <h4>Massimo Artemisis</h4>
-                                    <div class="job-box-footer">
-                                        <span>Sacramento, California</span>
-                                        <a href="#" class="job-box-btn">Apply now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-lg-4">
-                            <div class="job-box">
-                                <div class="job-box-header">
-                                    <div class="badge pink">Full time</div>
-                                    <div class="icon-box favorite margin-right"></div>
-                                </div>
-                                <div class="job-box-content">
-                                    <h3>Web designer/Developer</h3>
-                                    <h4>Massimo Artemisis</h4>
-                                    <div class="job-box-footer">
-                                        <span>Sacramento, California</span>
-                                        <a href="#" class="job-box-btn">Apply now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

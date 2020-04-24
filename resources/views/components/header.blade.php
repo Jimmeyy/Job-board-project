@@ -3,7 +3,7 @@
         <div class="row middle-xs">
             <div class="col-xs-6 col-lg-2">
                 <div class="header-logo">
-                    <img src="images/logo.png" alt="logo">
+                    <img src="{{ url('images/logo.png') }}" alt="logo">
                 </div>
             </div>
             <div class="col-xs-6 col-lg-10">
@@ -19,12 +19,10 @@
                     <ul class="header-auth">
                         @guest
                             <li>
-                                <a href="{{ route('register') }}"
-                                    class="header-auth-register modal-register-btn-js">Sign up</a>
+                                <a href="{{ route('register') }}" class="header-auth-register modal-register-btn-js">Sign up</a>
                             </li>
                             <li>
-                                <a href="{{ route('login') }}"
-                                    class="header-auth-login modal-login-btn-js">Login</a>
+                                <a href="{{ route('login') }}" class="header-auth-login modal-login-btn-js">Login</a>
                             </li>
                         @endguest
                         @auth
